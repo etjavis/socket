@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  project-socket:
+    build:
+      context: ./
+      target: dev
+    volumes:
+      - "./:/usr/src/"
+    environment:
+      NODE_ENV: dev
+    ports:
+      - "3000:3000"
